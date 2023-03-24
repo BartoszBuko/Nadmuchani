@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Boogaloo&family=Luckiest+Guy&family=Secular+One&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}

@@ -1,0 +1,72 @@
+.header {
+  background-image: url("../img/header-bcg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 146px;
+}
+
+.heading-primary--main {
+  font-family: var(--ff-luckiestguy);
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  color: var(--clr-primary);
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.15em;
+  text-shadow: 1px 1px 0 var(--clr-secondary), -1px 1px 0 var(--clr-secondary),
+    1px -1px 0 var(--clr-secondary), -1px -1px 0 var(--clr-secondary),
+    0px 1px 0 var(--clr-secondary), 0px -1px 0 var(--clr-secondary),
+    -1px 0px 0 var(--clr-secondary), 1px 0px 0 var(--clr-secondary),
+    2px 2px 0 var(--clr-secondary), -2px 2px 0 var(--clr-secondary),
+    2px -2px 0 var(--clr-secondary), -2px -2px 0 var(--clr-secondary),
+    0px 2px 0 var(--clr-secondary), 0px -2px 0 var(--clr-secondary),
+    -2px 0px 0 var(--clr-secondary), 2px 0px 0 var(--clr-secondary),
+    1px 2px 0 var(--clr-secondary), -1px 2px 0 var(--clr-secondary),
+    1px -2px 0 var(--clr-secondary), -1px -2px 0 var(--clr-secondary),
+    2px 1px 0 var(--clr-secondary), -2px 1px 0 var(--clr-secondary),
+    2px -1px 0 var(--clr-secondary), -2px -1px 0 var(--clr-secondary);
+}
+
+.heading-primary--sub {
+  color: var(--clr-secondary);
+  font-family: var(--ff-boogaloo);
+  letter-spacing: 0.1em;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-nav__icon {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  font-size: 2rem;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  cursor: pointer;
+  z-index: 100;
+  padding: 0.3rem 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 0px 0px 5px;
+  -webkit-border-radius: 0px 0px 0px 5px;
+  -moz-border-radius: 0px 0px 0px 5px;
+  -ms-border-radius: 0px 0px 0px 5px;
+  -o-border-radius: 0px 0px 0px 5px;
+}
+
+.mobile-nav__content {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .heading-primary--main {
+    margin-top: 0;
+  }
+}
