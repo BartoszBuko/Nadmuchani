@@ -36,8 +36,9 @@
 .heading-primary--sub {
   color: var(--clr-secondary);
   font-family: var(--ff-boogaloo);
+  font-weight: 700;
   letter-spacing: 0.1em;
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -50,7 +51,7 @@
   color: var(--clr-secondary);
   cursor: pointer;
   z-index: 3;
-  padding: 0.3rem 0.4rem;
+  padding: 0.3em 0.3em 0.3em 0.4em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,16 +62,15 @@
   -o-border-radius: 0px 0px 0px 5px;
 }
 
-.mobile-nav__icon--closed{
+.mobile-nav__icon--closed {
   position: absolute;
-  top: 0rem;
-  right: 0rem;
+  top: 0.5rem;
+  right: 0.5rem;
   font-size: 2rem;
   background-color: var(--clr-primary);
   color: var(--clr-secondary);
   cursor: pointer;
-  z-index: 5;
-  padding: 0.3rem 0.4rem;
+  padding: 0.3em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,50 +85,68 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-
   left: 0;
   top: 0;
   background-color: var(--clr-primary);
-  z-index: 2;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  transition: transform 1.3s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+  -webkit-transition: transform 0.7s ease-in-out;
+  -moz-transition: transform 0.7s ease-in-out;
+  -ms-transition: transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out;
 }
 
-.mobile-nav__list{
+.mobile-nav__list {
   list-style: none;
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
 }
 
-a{
+.mobile-nav__item {
+  opacity: 0;
+}
+
+.mobile-nav__link {
+  cursor: pointer;
+}
+
+a {
   text-decoration: none;
   color: var(--clr-secondary);
   font-family: var(--ff-boogaloo);
 }
 
-.closed{
-  display: none;
+.closed {
   transform: translateX(100vw);
+  -webkit-transform: translateX(100vw);
+  -moz-transform: translateX(100vw);
+  -ms-transform: translateX(100vw);
+  -o-transform: translateX(100vw);
 }
 
-.dsiplay-none{
-  display: none;
+.display-none {
+  z-index: 0;
 }
 
-.active{
+.main-nav__link {
+  cursor: pointer;
+}
+
+.active {
   text-decoration: underline;
 }
 
 @media screen and (min-width: 800px) {
   .heading-primary--main {
-    margin-top: 0;
+    margin-top: 0.8rem;
   }
 
-  .mobile-nav{
+  .mobile-nav {
     display: none;
   }
 }

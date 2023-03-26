@@ -1,0 +1,37 @@
+.separator {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  align-items: center;
+}
+
+.separator__text {
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  color: var(--clr-primary);
+  font-family: var(--ff-luckiestguy);
+  margin-top: 1rem;
+  position: relative;
+}
+
+.separator__text::before {
+  content: "";
+  position: absolute;
+  width: 45vw;
+  height: 3px;
+  background-color: var(--clr-primary);
+  top: 40%;
+  left: -50vw;
+  transform: translateY(-50%);
+}
+
+.separator__text::after {
+  content: "";
+  position: absolute;
+  width: 45vw;
+  height: 3px;
+  background-color: var(--clr-primary);
+  top: 40%;
+  right: -50vw;
+  transform: translateY(-50%);
+}

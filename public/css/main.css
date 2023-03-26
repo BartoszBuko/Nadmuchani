@@ -1,3 +1,536 @@
 @import url("variables.css");
-@import url("config.css");
+@import url("animations.css");
 @import url("header.css");
+@import url("config.css");
+@import url("separator.css");
+@import url("footer.css");
+
+.main-nav {
+  width: 100vw;
+  height: 73px;
+  background-color: var(--clr-primary);
+  font-family: var(--ff-boogaloo);
+  color: var(--clr-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 2;
+  font-size: clamp(1.1rem, 4.5vw, 1.35rem);
+}
+
+.phone-number__text {
+  font-weight: 700;
+  margin-top: 0.4rem;
+}
+
+.phone-number__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1em;
+}
+
+.phone-number__number {
+  text-decoration: none;
+  font-family: var(--ff-secularone);
+}
+
+.main-nav__list {
+  display: none;
+}
+
+.main__hero {
+  height: 460px;
+  background-image: url("../img/osmiornica.jpg"), url("../img/safari.jpg");
+  background-position: left center, right center;
+  background-size: 50vw, 50vw;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.main__hero--text-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  padding: 1rem 0 1rem 2rem;
+  width: 100%;
+  z-index: 1;
+  background: linear-gradient(90deg, #4288fa 0%, rgba(217, 217, 217, 0) 69.78%);
+}
+
+.main__hero--text-box > * {
+  width: 60%;
+}
+
+.heading-primary {
+  font-family: var(--ff-secularone);
+  font-weight: 400;
+  font-size: clamp(1.3rem, 3.5vw, 2rem);
+  color: var(--clr-secondary);
+  text-transform: uppercase;
+  margin-block: 1rem;
+  letter-spacing: 0.1em;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.main__offer--box--img {
+  margin-top: 1.5rem;
+  background-image: url("../img/white.jpg");
+  position: relative;
+
+  /* Set a specific height */
+  height: 250px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main__offer--box--img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(68, 136, 250, 0.6);
+  top: 0;
+  left: 0;
+}
+
+@media screen and (min-width: 800px) {
+  .main-nav {
+    justify-content: space-between;
+  }
+
+  .phone-number__text {
+    display: none;
+  }
+
+  .main__hero--text-box {
+    padding: 1rem 0 2rem 2rem;
+  }
+
+  .phone-number {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .main-nav__list {
+    display: flex;
+    margin-top: 0.4rem;
+    align-items: center;
+    column-gap: 2rem;
+    list-style: none;
+  }
+
+  .main-nav__item {
+    font-weight: 700;
+    position: relative;
+  }
+
+  .main-nav__item::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--clr-secondary);
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+  }
+
+  .main-nav__item:hover::before {
+    width: 100%;
+  }
+}
+
+.main__offer {
+  margin-top: 3.5rem;
+}
+
+.main__offer--items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 4rem;
+}
+
+.main__offer--item {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  row-gap: 4rem;
+  width: 80vw;
+  max-width: 500px;
+  position: relative;
+}
+
+.main__offer--item:first-child::after {
+  content: "";
+  position: absolute;
+  width: 200vw;
+  height: 3px;
+  background-color: var(--clr-primary);
+  bottom: -30px;
+  left: -50vw;
+}
+
+.main__offer--item--img {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.first-offer {
+  background-image: url("../img/safari.jpg");
+}
+
+.second-offer {
+  background-image: url("../img/osmiornica.jpg");
+}
+
+.item--sub {
+  display: block;
+  font-size: clamp(1.4rem, 3.5vw, 1.7rem);
+  color: var(--clr-primary);
+  font-family: var(--ff-boogaloo);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.6rem 0.8rem 0.3rem 0.8rem;
+  border: 2px solid var(--clr-primary);
+}
+
+.item__sizes {
+  font-family: var(--ff-secularone);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1rem;
+}
+
+.item__sizes--text {
+  color: var(--clr-primary);
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+}
+.item__sizes--container {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 0.5rem;
+}
+.item__sizes--container--item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 0.5rem;
+  justify-content: center;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  color: var(--clr-third);
+}
+
+.item__sizes--container--item > i {
+  color: var(--clr-primary);
+}
+
+.main__offer--item--text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 3rem;
+  max-width: 450px;
+}
+
+.main__offer--item--text--container {
+  color: var(--clr-third);
+  font-family: var(--ff-secularone);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1rem;
+}
+
+.main__offer--item--text--description {
+  text-align: left;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 3rem;
+  background-color: var(--clr-primary);
+}
+
+.gallery__text {
+  color: var(--clr-secondary);
+  margin-top: 3rem;
+  font-family: var(--ff-boogaloo);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  text-align: center;
+}
+
+.gallery__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+.main__gallery--item {
+  aspect-ratio: 1/1;
+  width: 90vw;
+  max-width: 350px;
+}
+
+.first__img {
+  background-image: url("../img/329707530_549803953683507_6644947013499661176_n.jpg");
+}
+
+.second__img {
+  background-image: url("../img/osmiornica.jpg");
+}
+
+.third__img {
+  background-image: url("../img/safari.jpg");
+}
+
+.fourth__img {
+  background-image: url("../img/white.jpg");
+}
+
+.first__img,
+.second__img,
+.third__img,
+.fourth__img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.faq__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
+  padding: 3rem 0;
+}
+
+.faq__item--question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1rem;
+  padding: 0 1rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.faq__item--question::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 3px;
+  background-color: var(--clr-primary);
+  bottom: -8px;
+  left: 0;
+}
+
+.faq__item--answer {
+  font-family: var(--ff-secularone);
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  margin-top: 8px;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+}
+
+.faq__item--answer--text {
+  padding: 1rem;
+}
+
+.fa-play {
+  color: var(--clr-primary);
+}
+
+.faq__header {
+  font-family: var(--ff-secularone);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  color: var(--clr-primary);
+  letter-spacing: 0.05em;
+
+  font-weight: 400;
+}
+
+.regulations {
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  font-family: var(--ff-secularone);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  padding-bottom: 2rem;
+}
+
+.regulations__main--text {
+  text-align: center;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  margin-top: 1rem;
+  padding: 1.5rem 1rem 1rem 1rem;
+  font-weight: 700;
+  font-family: var(--ff-boogaloo);
+}
+
+.regulations__wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.regulations__text {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+@media screen and (min-width: 1100px) {
+  .faq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .faq__item--answer {
+    display: none;
+  }
+
+  .faq__answer--desktop {
+    z-index: 5;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    border: 3px solid var(--clr-primary);
+    background-color: var(--clr-secondary);
+  }
+
+  .faq__item--answer--text {
+    font-family: var(--ff-secularone);
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    color: var(--clr-primary);
+  }
+  .faq__item {
+    width: 50vw;
+    max-width: 1000px;
+  }
+
+  .faq__item--question::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--clr-primary);
+    bottom: -8px;
+    left: 0;
+    transition: width 1s ease-in-out;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -ms-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+  }
+
+  .opened__desktop--answer {
+    position: relative;
+  }
+
+  .opened__desktop--answer::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: var(--clr-primary);
+    bottom: -8px;
+    left: 0;
+    width: calc(100% + 600px);
+    z-index: -1;
+  }
+  .phone-number__text {
+    display: initial;
+  }
+
+  .main__offer--items {
+    position: relative;
+  }
+
+  .main__offer--items::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: calc(100% + 3.5rem);
+    background-color: var(--clr-primary);
+    top: -3.5rem;
+    left: 50%;
+  }
+  .main__offer--item {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 7rem;
+    width: 100vw;
+    max-width: initial;
+  }
+
+  .main__offer--item--text {
+    padding-left: 50px;
+  }
+
+  .main__offer--item--img > img {
+    width: 300px;
+    margin-left: 100px;
+  }
+
+  .margin-top {
+    margin-top: 3rem;
+    flex-direction: row-reverse;
+  }
+
+  .gallery__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5rem;
+    column-gap: 10rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .main__hero {
+    background-image: url("../img/osmiornica.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" >
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,9 +16,12 @@
     <title>Nadmuchani</title>
     <link rel="stylesheet" href="public/css/main.css" />
     <script src="https://kit.fontawesome.com/feb09a26ce.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="./public/js/script.js" defer></script>
   </head>
   <body>
-    <header class="header">
+    <div class="ball"></div>
+    <header class="header" data-main>
       <div class="header__text-box">
         <h1 class="heading-primary--main">Nadmuchani</h1>
         <p class="heading-primary--sub">
@@ -26,28 +29,25 @@
         </p>
       </div>
       <nav class="mobile-nav">
-        <div class="mobile-nav__icon">
+        <div class="mobile-nav__icon" data-nav-open>
           <i class="fa-solid fa-bars"></i>
         </div>
-        <div class="mobile-nav__content closed">
-          <div class="mobile-nav__icon--closed" data-close-nav>
+        <nav class="mobile-nav__content closed" data-nav>
+          <div class="mobile-nav__icon--closed" data-nav-close>
             <i class="fa-solid fa-xmark fa-1x"></i>
         </div>
           <ul class="mobile-nav__list">
-            <li class="mobile-nav__item">
-              <a href="#" class="mobile-nav__link active">Strona główna</a>
+            <li class="mobile-nav__item" data-link >
+              <a  class="mobile-nav__link" >Oferta</a>
             </li>
-            <li class="mobile-nav__item">
-              <a href="#" class="mobile-nav__link">Oferta</a>
+            <li class="mobile-nav__item" data-link >
+              <a  class="mobile-nav__link" >Galeria</a>
             </li>
-            <li class="mobile-nav__item">
-              <a href="#" class="mobile-nav__link">Galeria</a>
+            <li class="mobile-nav__item" data-link >
+              <a  class="mobile-nav__link" >FAQ</a>
             </li>
-            <li class="mobile-nav__item">
-              <a href="#" class="mobile-nav__link">FAQ</a>
-            </li>
-            <li class="mobile-nav__item">
-              <a href="#" class="mobile-nav__link">Regulamin</a>
+            <li class="mobile-nav__item" data-link >
+              <a class="mobile-nav__link" >Regulamin</a>
             </li>
           </ul>
         </div>
@@ -58,216 +58,253 @@
         <p class="phone-number__text">Zarezerwuj termin juz teraz:</p>
         <div class="phone-number__container">
           <i class="fas fa-phone"></i>
-          <p class="phone-number__number">+48 123 456 789</p>
+          <a href="tel:509 643 616" class="phone-number__number">509 643 616</a>
         </div>
       </div>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a href="#" class="main-nav__link">Strona główna</a>
+          <a  class="main-nav__link" data-link>Oferta</a>
         </li>
         <li class="main-nav__item">
-          <a href="#" class="main-nav__link">Oferta</a>
+          <a  class="main-nav__link" data-link>Galeria</a>
         </li>
         <li class="main-nav__item">
-          <a href="#" class="main-nav__link">Galeria</a>
+          <a  class="main-nav__link" data-link>FAQ</a>
         </li>
         <li class="main-nav__item">
-          <a href="#" class="main-nav__link">FAQ</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">Regulamin</a>
+          <a  class="main-nav__link" data-link>Regulamin</a>
         </li>
       </ul>
     </nav>
-    <section class="main__hero">
+    <section class="main__hero" id="main" >
       <div class="main__hero--text-box">
-        <h2 class="heading-primary--main">Na każdą okazję</h2>
+        <h2 class="heading-primary">Na każdą okazję</h2>
         <p class="heading-primary--sub">
           Wesela, urodziny, komunie, festyny...
         </p>
       </div>
     </section>
-    <div class="separator">
-      <div class="separator__line"></div>
-      <div class="separator__text">Oferta</div>
-      <div class="separator__line"></div>
+    <div class="separator" data-offer id="offer">
+      <div class="separator__text" >oferta</div>
     </div>
-    <section class="main__offer">
-      <div class="main__offer--box">
         <div class="main__offer--box--img">
-          <img src="public/img/white.jpg" alt="Dmuchańce" />
         </div>
-      </div>
+    <section class="main__offer" >   
       <div class="main__offer--items">
         <div class="main__offer--item">
-          <div class="main__offer--item--img">
-            <img src="public/img/safari.jpg" alt="Safari" />
+          <div class="main__offer--item--img first-offer">
+           
           </div>
           <div class="main__offer--item--text">
-            <h3 class="heading-primary--sub">Afrykańskie safari</h3>
+            <h3 class="item--sub">Afrykańskie safari</h3>
             <div class="item__sizes">
               <p class="item__sizes--text">Wymiary:</p>
               <div class="item__sizes--container">
                 <div class="item__sizes--container--item">
-                  <i class="arrow"></i>
+                    <i class="fa-sharp fa-solid fa-ruler-horizontal"></i>
                   <p class="item__sizes--container--item--text">Długość: 8m</p>
                 </div>
                 <div class="item__sizes--container--item">
-                  <i class="arrow"></i>
+                  <i class="fa-sharp fa-solid fa-ruler"></i>
                   <p class="item__sizes--container--item--text">
                     Szerokość: 5m
                   </p>
                 </div>
                 <div class="item__sizes--container--item">
-                  <i class="arrow"></i>
-                  <p class="item__sizes--container--item--text">Długość: 6m</p>
+                  <i class="fa-solid fa-ruler-vertical"></i>
+                  <p class="item__sizes--container--item--text">Wysokość: 6m</p>
                 </div>
               </div>
             </div>
-            <p class="main__offer--item--text--description">
-              Dziś zapraszamy wszystkich na afrykańskie safari! Oczywiście
-              skupiać będziemy się na dobrej zabawie oraz dmuchańcowych emocjach
-              Egzotyczna dżungla oczekuje na Was. Uśmiechnięte żyrafy kolorowe
-              tukany, wesołe małpki oraz przyjazne słonie zapraszają do wspólnej
-              zabawy na afrykańskiej zjeżdżalni!
-            </p>
+
+            <div class="main__offer--item--text--container">
+              <p class="item__sizes--text">Opis</p>
+              <p class="main__offer--item--text--description">
+                Dziś zapraszamy wszystkich na afrykańskie safari! Oczywiście
+                skupiać będziemy się na dobrej zabawie oraz dmuchańcowych emocjach
+                Egzotyczna dżungla oczekuje na Was. Uśmiechnięte żyrafy kolorowe
+                tukany, wesołe małpki oraz przyjazne słonie zapraszają do wspólnej
+                zabawy na afrykańskiej zjeżdżalni!
+              </p>
+            </div>
           </div>
         </div>
-        <div class="main__offer--item">
-          <div class="main__offer--item--img">
-            <img src="public/img/osmiornica.jpg" alt="Safari" />
+        <div class="main__offer--item margin-top">
+          <div class="main__offer--item--img second-offer">
+          
           </div>
           <div class="main__offer--item--text">
-            <h3 class="heading-primary--sub">Zjeżdżalnia Ośmiornica</h3>
+            <h3 class="item--sub">Zjeżdżalnia Ośmiornica</h3>
             <div class="item__sizes">
               <p class="item__sizes--text">Wymiary:</p>
               <div class="item__sizes--container">
                 <div class="item__sizes--container--item">
-                  <i class="arrow"></i>
+                  <i class="fa-sharp fa-solid fa-ruler-horizontal"></i>
                   <p class="item__sizes--container--item--text">Długość: 8m</p>
                 </div>
                 <div class="item__sizes--container--item">
-                  <i class="arrow"></i>
+                  
+                  <i class="fa-solid fa-ruler"></i>
                   <p class="item__sizes--container--item--text">
                     Szerokość: 5m
                   </p>
                 </div>
-                <div class="item__sizes--container--item">
-                  <i class="arrow"></i>
-                  <p class="item__sizes--container--item--text">Długość: 6m</p>
+                <div class="item__sizes--container--item ">
+                  <i class="fa-solid fa-ruler-vertical "></i>
+                  <p class="item__sizes--container--item--text">Wysokość: 6m</p>
                 </div>
               </div>
             </div>
-            <p class="main__offer--item--text--description">
-              Kolorowa zjeżdżalnia w morskim stylu z motywem ośmiornicy.
-            </p>
+      
+              <div class="main__offer--item--text--container">
+                <p class="item__sizes--text">Opis</p>
+                <p class="main__offer--item--text--description">Kolorowa zjeżdżalnia w morskim stylu z motywem ośmiornicy.</p>
+              </div>
           </div>
         </div>
       </div>
     </section>
-    <div class="separator">
+    <div class="separator" data-gallery id="gallery">
       <div class="separator__line"></div>
       <div class="separator__text">Galeria</div>
       <div class="separator__line"></div>
     </div>
-    <section class="gallery">
+    <section class="gallery" >
       <p class="gallery__text">Oto galeria naszych dmuchańców</p>
       <div class="gallery__wrapper">
-        <div class="main__gallery--item">
-          <img
-            src="public/img/329707530_549803953683507_6644947013499661176_n.jpg"
-            alt="Dmuchańce"
-          />
+        <div class="main__gallery--item first__img">          
         </div>
-        <div class="main__gallery--item">
-          <img src="public/img/white.jpg" alt="Dmuchańce" />
+        <div class="main__gallery--item second__img"">
         </div>
-        <div class="main__gallery--item">
-          <img src="public/img/safari.jpg" alt="Dmuchańce" />
+        <div class="main__gallery--item third__img"">
         </div>
-        <div class="main__gallery--item">
-          <img src="public/img/osmiornica.jpg" alt="Dmuchańce" />
+        <div class="main__gallery--item fourth__img"">
         </div>
       </div>
     </section>
-    <div class="separator">
+    <div class="separator" data-faq id="faq">
       <div class="separator__line"></div>
       <div class="separator__text">FAQ</div>
       <div class="separator__line"></div>
     </div>
-    <section class="faq">
-      <div class="faq__wrappper">
+    <section class="faq" >
+      <div class="faq__wrapper" data-faq-wrapper>
         <div class="faq__item">
-          <div class="faq__item--question">
-            <h3 class="heading-primary--sub">
+          <div class="faq__item--question" data-question>
+            <h3 class="faq__header">
               Jaki teren powinienem zapewnić?
             </h3>
-            <i class="triangle"></i>
+           <i class="fa-sharp fa-solid fa-play"></i>
+          </div>
+          <div class="faq__item--answer answer__closed" data-answer>
+            <p class="faq__item--answer--text">
+              Dmuchańce powinny być użytkowane na miękkim, trawiastym podłożu. Jeśli nie masz takiej możliwości - poinformuj nas wcześniej!
+Teren dla naszych urządzeń powinien być w miarę równy oraz dokładnie oczyszczony z wszystkich zanieczyszczeń.
+Wymiary naszych urządzeń znajdziesz w ofercie. Zadbaj o to, aby uczestnicy imprezy mieli zapewnione dookoła nich swobodne przejście.
+            </p>
           </div>
         </div>
         <div class="faq__item">
-          <div class="faq__item--question">
-            <h3 class="heading-primary--sub">Jak wygląda kwestia zasilania?</h3>
-            <i class="triangle"></i>
+          <div class="faq__item--question" data-question>
+            <h3 class="faq__header">Jak wygląda kwestia zasilania?</h3>
+           <i class="fa-sharp fa-solid fa-play"></i>
+          </div>
+            <div class="faq__item--answer answer__closed" data-answer>
+            <p class="faq__item--answer--text">
+             Dostęp do źródła zasilania zapewnia organizator imprezy. Każdy nasz dmuchaniec jest zasilany dmuchawą 1,1kW.
+Posiadamy ze sobą przedłużacze o długości 50m. W przypadku większej odległości od źródła zasilania - ostrzeż nas już podczas składania zamówienia.
+            </p>
           </div>
         </div>
         <div class="faq__item">
-          <div class="faq__item--question">
-            <h3 class="heading-primary--sub">
+          <div class="faq__item--question" data-question>
+            <h3 class="faq__header">
               Ile wynosi czas trwania wynajmu?
             </h3>
-            <i class="triangle"></i>
+           <i class="fa-sharp fa-solid fa-play"></i>
+          </div>
+            <div class="faq__item--answer answer__closed" data-answer>
+            <p class="faq__item--answer--text">
+              Czas obsługi urządzeń wynosi 6h.
+              Dla osób prywatnych czas wynajmu wynosi 5 godzin (7 godzin wraz z montażem i demontażem). Istnieje możliwość przedłużenia czasu za dodatkową opłatą.
+            </p>
           </div>
         </div>
         <div class="faq__item">
-          <div class="faq__item--question">
-            <h3 class="heading-primary--sub">
+          <div class="faq__item--question" data-question>
+            <h3 class="faq__header">
               Czy konieczna jest wpłata zaliczki?
             </h3>
-            <i class="triangle"></i>
+           <i class="fa-sharp fa-solid fa-play"></i>
+          </div>
+            <div class="faq__item--answer answer__closed" data-answer>
+            <p class="faq__item--answer--text">
+              Kwestię zaliczkowania ustalamy z każdym klientem indywidualnie.
+            </p>
           </div>
         </div>
         <div class="faq__item">
-          <div class="faq__item--question">
-            <h3 class="heading-primary--sub">
+          <div class="faq__item--question" data-question>
+            <h3 class="faq__header">
               Kiedy dostarczycie i odbierzecie sprzęt?
             </h3>
-            <i class="triangle"></i>
+           <i class="fa-sharp fa-solid fa-play"></i>
+          </div>
+            <div class="faq__item--answer answer__closed" data-answer>
+            <p class="faq__item--answer--text">
+              Sprzęt dostarczamy w okolicach południa (11:00-13:00), odbieramy wieczorem (18:00-20:00). O indywidualnych wymaganiach godzinowych należy poinformować wcześniej.
+            </p>
           </div>
         </div>
         <div class="faq__item">
-          <div class="faq__item--question">
-            <h3 class="heading-primary--sub">Gdzie mogę używać dmuchańców?</h3>
-            <i class="triangle"></i>
+          <div class="faq__item--question" data-question>
+            <h3 class="faq__header">Gdzie mogę używać dmuchańców?</h3>
+           <i class="fa-sharp fa-solid fa-play"></i>
+          </div>
+            <div class="faq__item--answer answer__closed" data-answer>
+            <p class="faq__item--answer--text">
+              Dla osób prywatnych: 
+             Urządzenie może być wynajęte tylko na terenie prywatnym (np. w ogrodzie) i nie może być użytkowane w ramach imprez publicznych.
+            </p>
           </div>
         </div>
         <div class="faq__item">
-          <div class="faq__item--question">
-            <h3 class="heading-primary--sub">
+          <div class="faq__item--question" data-question>
+            <h3 class="faq__header">
               Czy będzie podpisywana umowa najmu?
             </h3>
-            <i class="triangle"></i>
+           <i class="fa-sharp fa-solid fa-play"></i>
+          </div>
+            <div class="faq__item--answer answer__closed" data-answer>
+            <p class="faq__item--answer--text">
+              Przed rozpoczęciem korzystania z urządzeń wymagamy podpisania umowy najmu oraz regulaminu.
+            </p>
           </div>
         </div>
         <div class="faq__item">
-          <div class="faq__item--question">
-            <h3 class="heading-primary--sub">
+          <div class="faq__item--question" data-question>
+            <h3 class="faq__header">
               Co w przypadku zdarzeń losowych ?
             </h3>
-            <i class="triangle"></i>
+           <i class="fa-sharp fa-solid fa-play"></i>
+          </div>
+            <div class="faq__item--answer answer__closed" data-answer>
+            <p class="faq__item--answer--text">
+              Nie ponosimy odpowiedzialności za zdarzenia losowe, np. nagłe zmiany pogodowe lub awarie prądu.
+            </p>
           </div>
         </div>
       </div>
-      <div class="faq__answer">
-        <p class="faq__answer--text" data-answer-text></p>
+      <div class="faq__answer--desktop mobile__hidden" data-answer-desktop>
+        <p class="faq__item--answer--text" data-answer-text></p>
       </div>
     </section>
-    <div class="separator">
+    <div class="separator" data-regulation id="regulationsid">
       <div class="separator__line"></div>
       <div class="separator__text">Regulamin</div>
       <div class="separator__line"></div>
     </div>
-    <section class="regulations">
+    <section class="regulations" >
       <p class="regulations__main--text">REGULAMIN KORZYSTANIA Z DMUCHAŃCA</p>
       <div class="regulations__wrapper">
         <p class="regulations__text">
@@ -357,13 +394,16 @@
       </div>
     </section>
     <footer class="footer">
-      <div class="footer__wrapper">
         <div class="footer__text">
-          <span>MIłej zabawy! NADMUCHANI <span data-year></span> &copy; All rights reserved</span>
+          <span class="font__luckiestguy"> NADMUCHANI <span data-year></span> &copy; All rights reserved</span>
         </div>
         <div class="footer__contact">
-          <a href="" class="link"><i class="ig">ig</i></a>
-          <a href="" class="link"><i class="fb">fb</i></a>
+          <a href="https://www.facebook.com/profile.php?id=100090696361001" target="_blank"  class="link"><i class="fa-brands fa-square-instagram fa-2x"></i></a>
+          <a href="" target="_blank" class="link"><i class="fa-brands fa-square-facebook fa-2x"></i></a>
+          <!-- email -->
+          <a href="mailto:Nadmuchani@wp.pl" target="_blank" class="link"><i class="fa-sharp fa-solid fa-envelope fa-2x"></i></a>
+          </div>  
     </footer>
+   <div class="scroll__to__top" data-scroll-top=""><i class="fa-solid fa-arrow-up "></i></div>
   </body>
 </html>

@@ -1,8 +1,8 @@
 :root {
   --ff-luckiestguy: "Luckiest Guy", cursive;
-  --ff-boogaloo: "Boogaloo", cursive;
+  --ff-boogaloo: "Solitreo", cursive;
   --ff-secularone: "Secular One", sans-serif;
   --clr-primary: hsl(217, 95%, 62%);
   --clr-secondary: hsl(0, 0%, 100%);
-  --clr-third: hsl(0, 0, 38, 85%);
+  --clr-third: #626262;
 }
