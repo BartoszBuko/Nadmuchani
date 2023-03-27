@@ -4,6 +4,7 @@
 @import url("config.css");
 @import url("separator.css");
 @import url("footer.css");
+@import url("modal.css");
 
 .main-nav {
   width: 100vw;
@@ -42,7 +43,7 @@
 
 .main__hero {
   height: 460px;
-  background-image: url("../img/osmiornica.jpg"), url("../img/safari.jpg");
+  background-image: url("../img/osmiornica.webp"), url("../img/safari.webp");
   background-position: left center, right center;
   background-size: 50vw, 50vw;
   background-repeat: no-repeat;
@@ -77,7 +78,7 @@
 
 .main__offer--box--img {
   margin-top: 1.5rem;
-  background-image: url("../img/white.jpg");
+  background-image: url("../img/white.webp");
   position: relative;
 
   /* Set a specific height */
@@ -197,11 +198,11 @@
 }
 
 .first-offer {
-  background-image: url("../img/safari.jpg");
+  background-image: url("../img/safari.webp");
 }
 
 .second-offer {
-  background-image: url("../img/osmiornica.jpg");
+  background-image: url("../img/osmiornica.webp");
 }
 
 .item--sub {
@@ -303,22 +304,23 @@
   aspect-ratio: 1/1;
   width: 90vw;
   max-width: 350px;
+  cursor: pointer;
 }
 
 .first__img {
-  background-image: url("../img/329707530_549803953683507_6644947013499661176_n.jpg");
+  background-image: url("../img/329707530_549803953683507_6644947013499661176_n.webp");
 }
 
 .second__img {
-  background-image: url("../img/osmiornica.jpg");
+  background-image: url("../img/osmiornica.webp");
 }
 
 .third__img {
-  background-image: url("../img/safari.jpg");
+  background-image: url("../img/safari.webp");
 }
 
 .fourth__img {
-  background-image: url("../img/white.jpg");
+  background-image: url("../img/white.webp");
 }
 
 .first__img,
@@ -524,11 +526,15 @@
     column-gap: 10rem;
     padding-bottom: 3rem;
   }
+
+  .main__gallery--item {
+    pointer-events: all;
+  }
 }
 
 @media screen and (max-width: 530px) {
   .main__hero {
-    background-image: url("../img/osmiornica.jpg");
+    background-image: url("../img/osmiornica.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

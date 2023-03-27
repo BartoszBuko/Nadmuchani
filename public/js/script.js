@@ -61,61 +61,41 @@ const faq = document.querySelector("[data-faq]");
 
 const regulations = document.querySelector("[data-regulation]");
 
-navLink.forEach(
-  (link) => {
-    link.addEventListener("click", (e) => {
-      setTimeout(() => {
-        navLink.forEach((link, i) => {
-          if (i === 0 || i % 2 == 0) {
-            link.classList.remove("slide-in-left");
-          } else {
-            link.classList.remove("slide-in-right");
-          }
-        });
-        body.classList.remove("prevent-scroll");
-        html.classList.remove("prevent-scroll");
-        const section = e.target.textContent;
-        if (section === "Oferta") {
-          const offerHeight = offer.getBoundingClientRect().top;
+navLink.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    setTimeout(() => {
+      navLink.forEach((link, i) => {
+        if (i === 0 || i % 2 == 0) {
+          link.classList.remove("slide-in-left");
+        } else {
+          link.classList.remove("slide-in-right");
+        }
+      });
+      body.classList.remove("prevent-scroll");
+      html.classList.remove("prevent-scroll");
+      const section = e.target.textContent;
+      if (section === "Oferta") {
+        const offerHeight = offer.getBoundingClientRect().top;
 
-          window.scrollTo(0, offerHeight);
-        }
-        if (section === "FAQ") {
-          const faqHeight = faq.getBoundingClientRect().top;
-          window.scrollTo(0, faqHeight);
-        }
-        if (section === "Galeria") {
-          const galleryHeight = gallery.getBoundingClientRect().top;
-          window.scrollTo(0, galleryHeight);
-        }
-        if (section === "Regulamin") {
-          const regulationsHeight = regulations.getBoundingClientRect().top;
-          console.log(window.scrollY);
-          window.scrollTo(0, regulationsHeight);
-        }
-      }, 700);
-      navOpen.classList.remove("display-none");
-      nav.classList.add("closed");
-    });
-  }
-  // } else {
-  //   link.addEventListener("click", (e) => {
-  //     const section = e.target.id;
-  //     if (section === "main") {
-  //       window.scrollTo(0, 0);
-  //     }
-  //     if (section === "offer") {
-  //       window.scrollTo(0, offerHeight);
-  //     }
-  //     if (section === "faq") {
-  //       window.scrollTo(0, faqHeight);
-  //     }
-  //     if (section === "regulations") {
-  //       window.scrollTo(0, regulationsHeight);
-  //     }
-  //   });
-  // }
-);
+        window.scrollTo(0, offerHeight);
+      }
+      if (section === "FAQ") {
+        const faqHeight = faq.getBoundingClientRect().top;
+        window.scrollTo(0, faqHeight);
+      }
+      if (section === "Galeria") {
+        const galleryHeight = gallery.getBoundingClientRect().top;
+        window.scrollTo(0, galleryHeight);
+      }
+      if (section === "Regulamin") {
+        const regulationsHeight = regulations.getBoundingClientRect().top;
+        window.scrollTo(0, regulationsHeight);
+      }
+    }, 700);
+    navOpen.classList.remove("display-none");
+    nav.classList.add("closed");
+  });
+});
 
 // faq functionality
 
@@ -222,3 +202,54 @@ if (
     ySet(pos.y);
   });
 }
+
+// modal functionality
+
+// Get the modal
+var modal = document.querySelector("[data-modal]");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var images = document.querySelectorAll("[data-image]");
+var modalImg = document.querySelector("[data-modal-img]");
+var captionText = document.querySelector("[data-modal-caption]");
+
+images.forEach((image, i) => {
+  image.addEventListener("click", () => {
+    switch (i) {
+      case 0:
+        modalImg.src =
+          "public/img/329707530_549803953683507_6644947013499661176_n.webp";
+
+        break;
+
+      case 1:
+        modalImg.src = "public/img/osmiornica.webp";
+
+        break;
+
+      case 2:
+        modalImg.src = "public/img/safari.webp";
+
+        break;
+
+      case 3:
+        modalImg.src = "public/img/white.webp";
+
+        break;
+    }
+
+    modal.style.display = "block";
+    body.classList.add("prevent-scroll");
+    html.classList.add("prevent-scroll");
+  });
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+  body.classList.remove("prevent-scroll");
+  html.classList.remove("prevent-scroll");
+};

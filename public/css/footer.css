@@ -8,7 +8,7 @@
   font-family: var(--ff-secularone);
   color: var(--clr-secondary);
   padding: 1rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.15rem;
 }
 
 .footer__text {
@@ -30,5 +30,9 @@
 @media screen and (min-width: 1100px) {
   .footer {
     padding: 1rem 2rem;
+  }
+
+  .footer__text {
+    flex-grow: 0;
   }
 }
