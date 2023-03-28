@@ -29,15 +29,15 @@ Try now on: https://nadmuchani.com.pl/ <br/>
 1. Copy this repository
 
 ```
-gh repo clone BartoszBuko/optiamazer
-cd ./optiamazer
+gh repo clone BartoszBuko/nadmuchani
+cd ./nadmuchani
 ```
 
 or
 
 ```
-git clone https://github.com/BartoszBuko/optiamazer.git
-cd ./optiamazer
+git clone https://github.com/BartoszBuko/nadmuchani.git
+cd ./nadmuchani
 ```
 
 2. Install required packages
