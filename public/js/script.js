@@ -236,6 +236,16 @@ images.forEach((image, i) => {
         modalImg.src = "public/img/white.webp";
 
         break;
+
+      case 4:
+        modalImg.src = "public/img/offer3.webp";
+
+        break;
+
+      case 5:
+        modalImg.src = "public/img/happybounce2.webp";
+
+        break;
     }
 
     modal.style.display = "block";
