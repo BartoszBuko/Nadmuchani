@@ -8,7 +8,7 @@
 
 .main-nav {
   width: 100vw;
-  height: 73px;
+  height: 100px;
   background-color: var(--clr-primary);
   font-family: var(--ff-boogaloo);
   color: var(--clr-secondary);
@@ -21,15 +21,30 @@
 }
 
 .phone-number__text {
+  text-align: center;
   font-weight: 700;
   margin-top: 0.4rem;
+}
+
+.address__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
 }
 
 .phone-number__container {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 1em;
+  flex-direction: column;
+}
+
+.address {
+  font-family: var(--ff-secularone);
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
 }
 
 .phone-number__number {
@@ -178,7 +193,7 @@
   position: relative;
 }
 
-.main__offer--item:first-child::after {
+.main__offer--item:not(.main__offer--item:last-child):after {
   content: "";
   position: absolute;
   width: 200vw;
@@ -203,6 +218,10 @@
 
 .second-offer {
   background-image: url("../img/osmiornica.webp");
+}
+
+.third-offer {
+  background-image: url("../img/offer3.webp");
 }
 
 .item--sub {
@@ -321,6 +340,17 @@
 
 .fourth__img {
   background-image: url("../img/white.webp");
+}
+.fifth__img {
+  background-image: url("../img/offer3.webp");
+  background-size: contain;
+}
+
+.sixth__img {
+  background-image: url("../img/happybounce2.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .first__img,
@@ -538,5 +568,17 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .phone-number__container {
+    flex-direction: row;
+    column-gap: 1rem;
+  }
+
+  .address {
+    font-size: 1rem;
+    padding-bottom: 0.3rem;
   }
 }
