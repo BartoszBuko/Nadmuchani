@@ -322,42 +322,74 @@
   width: 90vw;
   max-width: 350px;
   cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-family: var(--ff-boogaloo);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--clr-secondary);
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
 }
 
 .first__img {
-  background-image: url("../img/329707530_549803953683507_6644947013499661176_n.webp");
-}
-
-.second__img {
   background-image: url("../img/osmiornica.webp");
 }
 
-.third__img {
+.second__img {
   background-image: url("../img/safari.webp");
 }
-
-.fourth__img {
-  background-image: url("../img/white.webp");
-}
-.fifth__img {
+.third__img {
   background-image: url("../img/offer3.webp");
   background-size: contain;
-}
-
-.sixth__img {
-  background-image: url("../img/happybounce2.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .first__img,
 .second__img,
 .third__img,
-.fourth__img {
+.fourth__img,
+.offer__img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.offer__img {
+  background-image: url("../img/newoffer.webp");
+  background-size: contain;
+}
+
+.main__gallery--item--p {
+  z-index: 2;
+  background-color: var(--clr-primary);
+  text-align: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.first__img::before,
+.second__img::before,
+.third__img::before,
+.fourth__img::before,
+.offer__img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-primary);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.main__gallery--item:hover {
+  opacity: 0.8;
 }
 
 .faq__wrapper {

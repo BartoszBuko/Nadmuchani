@@ -1,0 +1,20 @@
+.second__img {
+  background-image: url("../img/osmiornica2.webp");
+}
+
+.third__img {
+  background-image: url("../img/osmiornica3.webp");
+}
+
+.first__img::before,
+.second__img::before,
+.third__img::before,
+.fourth__img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-primary);
+  opacity: 0;
+  z-index: 1;
+}
