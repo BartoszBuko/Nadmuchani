@@ -8,14 +8,14 @@
 
 .main-nav {
   width: 100vw;
-  height: 100px;
+  height: fit-content;
   background-color: var(--clr-primary);
   font-family: var(--ff-boogaloo);
   color: var(--clr-secondary);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   z-index: 2;
   font-size: clamp(1.1rem, 4.5vw, 1.35rem);
 }
@@ -45,6 +45,7 @@
   font-weight: 700;
   font-size: 0.8rem;
   margin-top: 0.4rem;
+  text-align: center;
 }
 
 .phone-number__number {
@@ -96,10 +97,7 @@
   background-image: url("../img/white.webp");
   position: relative;
 
-  /* Set a specific height */
   height: 250px;
-
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
