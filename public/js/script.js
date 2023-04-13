@@ -55,6 +55,8 @@ const mainHeight = main.getBoundingClientRect().top;
 
 const offer = document.querySelector("[data-offer]");
 
+const priceList = document.querySelector("[data-pricelist]");
+
 const gallery = document.querySelector("[data-gallery]");
 
 const faq = document.querySelector("[data-faq]");
@@ -78,6 +80,11 @@ navLink.forEach((link) => {
         const offerHeight = offer.getBoundingClientRect().top;
 
         window.scrollTo(0, offerHeight);
+      }
+
+      if (section === "Cennik") {
+        const priceListHeight = priceList.getBoundingClientRect().top;
+        window.scrollTo(0, priceListHeight);
       }
       if (section === "FAQ") {
         const faqHeight = faq.getBoundingClientRect().top;
