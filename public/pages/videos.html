@@ -19,19 +19,20 @@
     />
     <title>Nadmuchani - Wynajem dmuchańców ( filmiki )</title>
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/5w1.css" />
+    <link rel="stylesheet" href="../css/videos.css" />
     <script
       src="https://kit.fontawesome.com/feb09a26ce.js"
       crossorigin="anonymous"
     ></script>
     <script src="../js/script.js" defer></script>
     <script src="../js/videos.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   </head>
   <body>
     <div class="modal" data-modal>
       <span class="close"> <i class="fa-solid fa-xmark fa-1x"></i></span>
 
-      <video  class="modal-content" data-modal-img />
+      <video controls class="modal-content"  data-modal-video type="video/mp4" crossorigin="anonymous"></video>
 
       <div class="caption" data-modal-caption></div>
     </div>
@@ -87,26 +88,18 @@ Wodzislaw Śląski
     <section class="gallery">
       <p class="gallery__text">Nagrania i filmiki z imprez</p>
       <div class="gallery__wrapper">
-        <div
+        <a
           class="main__gallery--item first__img"
-          data-image
-          data-img="https://youtube.com/n0mB3tNKWDE"
-        ></div>
+          
+          href="https://www.youtube.com/watch?v=n0mB3tNKWDE"
+          target="_blank"
+        ><i class="fa-solid fa-play fa-2x play-btn"></i></a>
         <div
           class="main__gallery--item second__img"
-          data-image
-          data-img="5w12"
-        ></div>
-        <div
-          class="main__gallery--item third__img"
-          data-image
-          data-img="5w13"
-        ></div>
-        <div
-          class="main__gallery--item fourth__img"
-          data-image
-          data-img="5w14"
-        ></div>
+          data-video
+          data-vid="../videos/sloniktiktok.mp4"
+        ><i class="fa-solid fa-play fa-2x play-btn"></i></div>
+
       </div>
     </section>
     <footer class="footer">
