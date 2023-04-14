@@ -4,13 +4,13 @@
 var modal = document.querySelector("[data-modal]");
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var images = document.querySelectorAll("[data-image]");
-var modalImg = document.querySelector("[data-modal-img]");
+var videos = document.querySelectorAll("[data-video]");
+var modalIVideo = document.querySelector("[data-modal-video]");
 var captionText = document.querySelector("[data-modal-caption]");
 
-images.forEach((image, i) => {
-  image.addEventListener("click", (e) => {
-    modalImg.src = `../img/${e.target.attributes[2].value}.webp`;
+videos.forEach((video, i) => {
+  video.addEventListener("click", (e) => {
+    modalIVideo.src = e.target.attributes[2].value;
 
     modal.style.display = "block";
     body.classList.add("prevent-scroll");
@@ -26,4 +26,5 @@ span.onclick = function () {
   modal.style.display = "none";
   body.classList.remove("prevent-scroll");
   html.classList.remove("prevent-scroll");
+  modalIVideo.src = "";
 };
