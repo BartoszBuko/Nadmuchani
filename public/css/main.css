@@ -440,6 +440,10 @@
   background-size: contain;
 }
 
+.videos__img {
+  background-image: url("../img/videos.webp");
+}
+
 .first__img,
 .second__img,
 .third__img,
@@ -447,7 +451,8 @@
 .fifth__img,
 .sixth__img,
 .seventh__img,
-.offer__img {
+.offer__img,
+.videos__img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

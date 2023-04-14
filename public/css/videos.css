@@ -1,0 +1,14 @@
+.first__img {
+  background-image: url("../img/videos.webp");
+}
+
+.second__img {
+  background-image: url("../img/osmiornica.webp");
+}
+
+.play-btn {
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
