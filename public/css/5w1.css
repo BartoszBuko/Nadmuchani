@@ -14,10 +14,25 @@
   background-image: url("../img/5w14.webp");
 }
 
+.fifth__img {
+  background-image: url("../img/5w15.webp");
+}
+
+.sixth__img {
+  background-image: url("../img/5w16.webp");
+}
+
+.seventh__img {
+  background-image: url("../img/5w17.webp");
+}
+
 .first__img::before,
 .second__img::before,
 .third__img::before,
-.fourth__img::before {
+.fourth__img::before,
+.fifth__img::before,
+.sixth__img::before,
+.seventh__img::before {
   content: "";
   position: absolute;
   width: 100%;
