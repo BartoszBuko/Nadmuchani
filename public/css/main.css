@@ -363,8 +363,24 @@
   color: var(--clr-third);
   font-size: clamp(0.8rem, 2vw, 1.1rem);
 }
+
 .public {
   margin-top: 2rem;
+}
+
+.pricelist__text--list {
+  margin-top: 0.5rem;
+  list-style: square inside
+    url("data:image/gif;base64,R0lGODlhBQAKAIABAAAAAP///yH5BAEAAAEALAAAAAAFAAoAAAIIjI+ZwKwPUQEAOw==");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-primary);
+}
+
+.pricelist__item--sub {
+  margin-top: 1rem;
 }
 
 .gallery {
