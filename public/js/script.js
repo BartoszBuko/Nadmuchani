@@ -59,6 +59,8 @@ const priceList = document.querySelector("[data-pricelist]");
 
 const gallery = document.querySelector("[data-gallery]");
 
+const events = document.querySelector("[data-events]");
+
 const faq = document.querySelector("[data-faq]");
 
 const regulations = document.querySelector("[data-regulation]");
@@ -93,6 +95,11 @@ navLink.forEach((link) => {
       if (section === "Galeria") {
         const galleryHeight = gallery.getBoundingClientRect().top;
         window.scrollTo(0, galleryHeight);
+      }
+
+      if (section === "Imprezy") {
+        const eventsHeight = events.getBoundingClientRect().top;
+        window.scrollTo(0, eventsHeight);
       }
       if (section === "Regulamin") {
         const regulationsHeight = regulations.getBoundingClientRect().top;
