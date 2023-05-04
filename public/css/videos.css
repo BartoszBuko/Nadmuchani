@@ -6,6 +6,10 @@
   background-image: url("../img/osmiornica.webp");
 }
 
+.third__img {
+  background-image: url("../img/video1.webp");
+}
+
 .play-btn {
   background-color: var(--clr-primary);
   color: var(--clr-secondary);

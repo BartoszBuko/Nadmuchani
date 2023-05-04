@@ -9,11 +9,29 @@
 .third__img {
   background-image: url("../img/safari2.webp");
 }
+.fourth__img {
+  background-image: url("../img/safari3.webp");
+}
+
+.fifth__img {
+  background-image: url("../img/safari4.webp");
+}
+
+.sixth__img {
+  background-image: url("../img/safari5.webp");
+}
+
+.seventh__img {
+  background-image: url("../img/safari6.webp");
+}
 
 .first__img::before,
 .second__img::before,
 .third__img::before,
-.fourth__img::before {
+.fourth__img::before,
+.fifth__img::before,
+.sixth__img::before,
+.seventh__img::before {
   content: "";
   position: absolute;
   width: 100%;

@@ -5,6 +5,9 @@
 .third__img {
   background-image: url("../img/osmiornica3.webp");
 }
+.fourth__img {
+  background-image: url("../img/osmiornica3.webp");
+}
 
 .first__img::before,
 .second__img::before,
