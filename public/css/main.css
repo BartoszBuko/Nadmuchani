@@ -59,7 +59,8 @@
 
 .main__hero {
   height: 460px;
-  background-image: url("../img/osmiornica.webp"), url("../img/safari.webp");
+  background-image: url("../img/osmiornica.webp"),
+    url("../img/safariheader.webp");
   background-position: left center, right center;
   background-size: 50vw, 50vw;
   background-repeat: no-repeat;
@@ -211,11 +212,11 @@
 }
 
 .first-offer {
-  background-image: url("../img/safari.webp");
+  background-image: url("../img/safari5.webp");
 }
 
 .second-offer {
-  background-image: url("../img/osmiornica.webp");
+  background-image: url("../img/osmiornica2.webp");
 }
 
 .third-offer {
@@ -483,10 +484,10 @@
 }
 
 .second__img {
-  background-image: url("../img/safari.webp");
+  background-image: url("../img/safariheader.webp");
 }
 .third__img {
-  background-image: url("../img/offer3.webp");
+  background-image: url("../img/5w14.webp");
   background-size: contain;
 }
 
