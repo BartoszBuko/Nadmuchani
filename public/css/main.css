@@ -217,10 +217,15 @@
 
 .second-offer {
   background-image: url("../img/osmiornica2.webp");
+  background-position: -100px center;
 }
 
 .third-offer {
   background-image: url("../img/offer3.webp");
+}
+
+.fourth-offer {
+  background-image: url("../img/offer3-spider.webp");
 }
 
 .item--sub {
@@ -488,6 +493,11 @@
 }
 .third__img {
   background-image: url("../img/5w14.webp");
+  background-size: contain;
+}
+
+.fourth__img {
+  background-image: url("../img/offer3-spider.webp");
   background-size: contain;
 }
 
@@ -763,6 +773,12 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .second-offer {
+    background-position: -80px center;
   }
 }
 

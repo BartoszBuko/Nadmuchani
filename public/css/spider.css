@@ -1,0 +1,27 @@
+.first__img {
+  background-image: url("../img/offer3-spider.webp");
+}
+
+.second__img {
+  background-image: url("../img/spider3.webp");
+}
+
+.third__img {
+  background-image: url("../img/spider.webp");
+}
+
+.first__img::before,
+.second__img::before,
+.third__img::before,
+.fourth__img::before,
+.fifth__img::before,
+.sixth__img::before,
+.seventh__img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-primary);
+  opacity: 0;
+  z-index: 1;
+}
