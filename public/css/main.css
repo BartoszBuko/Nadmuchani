@@ -228,6 +228,10 @@
   background-image: url("../img/offer3-spider.webp");
 }
 
+.fifth__offer {
+  background-image: url("../img/watacukrowa.webp");
+}
+
 .item--sub {
   display: block;
   font-size: clamp(1.4rem, 3.5vw, 1.7rem);
