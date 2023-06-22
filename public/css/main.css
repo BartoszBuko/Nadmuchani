@@ -249,6 +249,10 @@
   background-image: url("../img/megadart.webp");
 }
 
+.seventh-offer {
+  background-image: url("../img/spider-duzy.webp");
+}
+
 .item--sub {
   display: block;
   font-size: clamp(1.4rem, 3.5vw, 1.7rem);
