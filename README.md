@@ -5,6 +5,11 @@
   <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/BartoszBuko/nadmuchani">
 </div>
 
+## IMPORTANT ❗
+
+It is a no longer used version of this site. New site ( with the same address ) is fully based on wordpress.
+I've decided to leave this version here because of the work that I've put into this project.
+
 ## About 👀
 
 <img src="https://socialify.git.ci/BartoszBuko/Nadmuchani/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Brick%20Wall&theme=Dark" alt="Nadmuchani" width="640" height="320" />
